@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TSEC Cyber Security Portal</title>
+		<meta name="robots" content="noindex, nofollow">
+		<!-- Include CSS File Here -->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+		<!-- Include CSS File Here -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>		
+		<script type="text/javascript">
+			localStorage['loggedInUser'] = '';			
+		</script>
+	</head>
+	<body>
+		<header id="header" style="display:none;">
+			<span style="float:left;"><img width="50" height="50" " src="resources/logo.png" /></span>
+			<span style="float:right;">Logged In User: <span id="logged-in-user"></span></span>
+		</header>
+		<div class="container" style="display: flex; align-items: center; margin: 0 auto;">			
+			<div class="main">
+				<div class="login-form">
+					<div>
+						<img width="120" height="120" style="display: flex; align-items: center; margin: 0 auto;" src="resources/logo.png" />
+					</div>
+					<div>
+						<form class="form" method="post" action="#">
+							<h2>Cyber Security Portal</h2>
+							<label>Username:</label>
+							<input type="text" name="username" id="username">
+							<label>Password:</label>
+							<input type="password" name="password" id="password">
+							<input type="button" name="login" id="login" value="Login">
+							<input type="button" name="signup" id="signup" value="Signup">
+						</form>
+					</div>
+				</div>	
+			</div>
+			<div class="complaint-list" id="complaint-list" style="display:none;width:100%;">
+				<div style="padding: 0 0 20 0" id="new-complaint">
+					<span><input type="text" placeholder="New complaint..." name="newComplaint" id="newComplaint" style="padding: 0 30px 0 0;width: 400px;"></span>
+					<span><input type="button" name="create" id="create" value="New" style="width: 60px !important"></span>
+				</div>
+				<table id="complaint-table" class="display">
+				</table>				
+			</div>
+			<div id="message" title="Cyber Security Portal Message"></div>
+		</div>
+		<footer>&copy; Copyright 2020 Darsh Shah</footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
